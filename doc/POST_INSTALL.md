@@ -1,12 +1,12 @@
 1. Allow your domain
 Edit the file /var/www/appflowy/appflowy_web/vite.config.ts by adding this option:
 `  preview: {
-    allowedHosts: ['__DOMAIN____PATH__'],
+    allowedHosts: ['__DOMAIN__'],
   },
 `
 
 2. Access
-The admin panel (Appflowy-Cloud) can be accessed at https://__DOMAIN____PATH__/console/web/login
+The admin panel (Appflowy-Cloud) can be accessed at https://__DOMAIN__/console/web/login
 
 The web application (Appflowy-Web) can be accessed at https://__DOMAIN____PATH__
 
