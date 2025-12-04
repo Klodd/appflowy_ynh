@@ -4,13 +4,15 @@ Edit the file /var/www/appflowy/appflowy_web/vite.config.ts by adding this optio
     allowedHosts: ['__DOMAIN__'],
   },
 `
+2. Restart the Web service
+`service appflowy_web restart`
 
-2. Access
+3. Access
 The admin panel (Appflowy-Cloud) can be accessed at https://__DOMAIN__/console/web/login
 
 The web application (Appflowy-Web) can be accessed at https://__DOMAIN____PATH__
 
-3. (Optional) Using a desktop client with your self-hosted Appflowy
+4. (Optional) Using a desktop client with your self-hosted Appflowy
 Download and install the AppFlowy application for you device: https://appflowy.io/downloaded
 
 Open the AppFlowy application.
