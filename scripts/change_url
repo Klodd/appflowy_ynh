@@ -33,7 +33,6 @@ ynh_config_change_url_nginx
 #=================================================
 ynh_script_progression "Updating $app's configuration files..."
 
-old_domain=$domain
 domain=$new_domain
 
 ynh_script_progression "Updating $app's configuration files..."
@@ -69,7 +68,10 @@ chown "$app:$app" "$install_dir/appflowy_web/.env"
 
 # We need to authorize the new domain in the web app vite config -> replace the allowedHosts entry
 pushd "$install_dir/appflowy_web"
-    ynh_replace --match="allowedHosts: ['$old_domain']" --replace="allowedHosts: ['$domain']" --file="vite.config.ts"
+    # We don't know how to get the old domain value, so this doesn't work
+    #ynh_replace --match="allowedHosts: ['$old_domain']" --replace="allowedHosts: ['$domain']" --file="vite.config.ts"
+    # So we just add the new domain to the allowedHosts array
+    ynh_replace --match="allowedHosts: [" --replace="allowedHosts: ['$domain'," --file="vite.config.ts"
 popd
 
 #=================================================
