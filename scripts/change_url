@@ -71,7 +71,7 @@ pushd "$install_dir/appflowy_web"
     # We don't know how to get the old domain value, so this doesn't work
     #ynh_replace --match="allowedHosts: ['$old_domain']" --replace="allowedHosts: ['$domain']" --file="vite.config.ts"
     # So we just add the new domain to the allowedHosts array
-    ynh_replace --match="allowedHosts: [" --replace="allowedHosts: ['$domain'," --file="vite.config.ts"
+    ynh_replace --match="allowedHosts: \[" --replace="allowedHosts: ['$domain'," --file="vite.config.ts"
 popd
 
 #=================================================
