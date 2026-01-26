@@ -7,9 +7,9 @@ name = "AppFlowy"
 description.en = "Bring projects, wikis, and teams together with AI"
 description.fr = "Rassembler des projets, des wikis et des équipes grâce à l'IA"
 
-version = "0.9.64~ynh1"
+version = "0.9.64~ynh2"
 
-maintainers = ["yalh76"]
+maintainers = ["Klodd"]
 
 [upstream]
 license = "AGPL-3.0-only"
